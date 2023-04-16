@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lora", serif;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  display: flex;
+}
+
+.sidebar {
+  flex: 1;
+}
+
+.main_content {
+  flex: 6;
+  background-color: rgb(247, 244, 244);
+  padding: 1.5rem;
+}
+
+.sidebar li {
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+  color: teal;
+}
+
+.logo {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 2rem;
+  color: teal;
+}
+
+.header .right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header .left {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.header .left select {
+  border: none;
+  outline: none;
+  appearance: none;
+  background: white;
+}
+
+.header .left .select {
+  background: white;
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+  font-weight: lighter;
+}
+
+.search_bar {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 2rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.right input {
+  border: none;
+  outline: none;
+}
+
+.tab_items {
+  padding-left: 2rem;
+  font-size: 1.3rem;
+}
