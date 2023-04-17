@@ -36,7 +36,7 @@ data = data.reset_index()
 
 
 # Route for customer-type distribution analysis
-@app.route('/customer-type-distribution.png')
+@app.route('/customer-type-distribution')
 def plot_png_customer_type():
     fig = create_figure_customer_type()
     output = io.BytesIO()
@@ -55,7 +55,7 @@ def create_figure_customer_type():
 
 
 # Route for finding gender distribution analysis
-@app.route('/gender-distribution.png')
+@app.route('/gender-distribution')
 def plot_png_gender_distribution():
     fig = create_figure_gender_distribution()
     output = io.BytesIO()
@@ -78,7 +78,7 @@ def create_figure_gender_distribution():
 data = data.sort_values(by='birthyear')
 
 
-@app.route('/age-distribution.png')
+@app.route('/age-distribution')
 def plot_png_age_distribution():
     fig = create_figure_age_distribution()
     output = io.BytesIO()
@@ -100,7 +100,7 @@ def create_figure_age_distribution():
 data = data.set_index('starttime')
 
 
-@app.route('/date-time-distribution.png')
+@app.route('/date-time-distribution')
 def plot_png_date_time_distribution():
     fig = create_figure_date_time_distribution()
     output = io.BytesIO()
@@ -149,7 +149,7 @@ top_10_stations = most_used_start_station.sort_values('rides_booked', ascending=
 bottom_10_stations = most_used_start_station.sort_values('rides_booked')[:10]
 
 
-@app.route('/most-used-distribution.png')
+@app.route('/most-used-distribution')
 def plot_png_most_used_distribution():
     fig = create_figure_most_used_distribution()
     output = io.BytesIO()
@@ -175,7 +175,7 @@ def create_figure_most_used_distribution():
     return fig
 
 
-@app.route('/least-used-distribution.png')
+@app.route('/least-used-distribution')
 def plot_png_least_used_distribution():
     fig = create_figure_least_used_distribution()
     output = io.BytesIO()
